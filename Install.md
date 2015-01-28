@@ -2,14 +2,14 @@
 
 You will need java 7
 
-##DATABASE
+##Database
 * If you are using database other than PostgreSQL, the driver needs to be added to www/WEB-INF/lib
 * We included the script and image of database schema that we used in [github url]
 
 
-##NO INSTRUCTION FOR WINDOW FOR NOW
+##No instruction for Windows for now
 
-##MAC:
+##Mac:
 
 * Download eclipse IDE for EE -- http://eclipse.org/downloads/
 * Download Tomcat 7 -- http://tomcat.apache.org/
@@ -57,14 +57,14 @@ PREFIX = for tomcat logging purposes
 * Set configuration file to the copy of server.xml above
 
 
-###TOMCAT PROJECT
+###Tomcat Project
 * Click File > New > Project 
 * Under 'Java", select 'Tomcat Project'
 * Select 'Use Existing Location', point it to where application lives
 * Set context to 'www'
 
 
-###CONFIGURATION
+###Configuration
 * Two files need to be modified with your configuration
 
 * Base.xml :
@@ -91,12 +91,12 @@ a copy of it under app_home/www/WEB-INF/classes/
 
 
 
-###DEPENDENCIES
+###Dependencies
 * On package explorer or project explorer, right click on the project, select 'Properties'
 * Go to 'Java Build Path' > Add library > Server Runtime
 * Add all jars in www/WEB-INF/lib if they are not added already
 
-###LASTLY
+###Lastly
 * Run Tomcat server 
 * Type in [HOST_NAME]:8080 on your browser and you should see a web page
 * Now you can make requests to the LRS
