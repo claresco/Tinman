@@ -1,0 +1,52 @@
+body, html, div{
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.top, .bottom{
+	width: 100%;
+	height: 25%;
+	background-color: #00348c;
+}
+
+.bottom{
+	position: absolute;
+	bottom: 0;
+	background-color: red;
+}
+
+.middle{
+	position: fixed;
+	width: 80%;
+	height: 50%;
+	left: 10%;
+	right: 10%;
+	top: 25%;
+	bottom: 25%;
+}
+
+#errorCode{
+	position: absolute;
+	height: 10%;
+	top: 10%;
+	left : 10%;
+}
+
+#message{
+	position: absolute;
+	height: 50%;
+	width: 25%;
+	top: 30%;
+	left: 15%;
+}
+
+#uncleSam{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 40%;
+	height: 100%;
+	float: right;
+}

@@ -1,0 +1,7 @@
+{
+	"actors":{
+		"objectType": "Person",
+        "name":"[This Person]",
+        "mbox":"[mailto:personA@society.com, mailto:personB@society.com]"
+	} 
+}

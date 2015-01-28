@@ -1,0 +1,24 @@
+Good inputs:
+
+insert profileId, agent and then retrieve it
+same profile id, same agent
+get non existent entry -- 404
+
+
+Bad inputs:
+Empty
+Null
+Random text
+
+Missing agent
+Missing profileId
+
+agent element empty
+profileId element empty
+
+agent element null
+profileId element null
+
+agent missing some parts
+
+pass in group as agent statement

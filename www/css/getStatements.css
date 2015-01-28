@@ -1,0 +1,525 @@
+html, body{
+	height: 250%;
+	width: 100%;
+}
+
+html, body, header, div {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 250%;
+}
+
+div{
+	position: absolute;
+}
+
+body{
+	background-color: #f4f2ab;
+}
+
+header{
+	position: absolute;
+	height : 80px;
+	width : 100%;
+	background-color: #91a162;
+	top: 0;	
+	left: 0;
+}
+
+h1{
+	position: absolute;
+	color: #332e28;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	left: 5%;
+}
+
+#main{
+	height : 80%;
+	width : 100%;
+	top : 80px;
+}	
+
+#main div{
+	background-color: #f6f6f6;
+	border: solid;
+	border-color: white;
+	border-width: 5px;
+}
+
+#ByAgent{
+	left : 11%;
+	top : 2500px;
+	width : 20%;
+	height : 300px;
+	border-radius: 15px;
+}
+
+#ByAgent span{
+	color : royalblue;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	font-size: 3em;
+}
+
+form{
+	padding: 10px;
+}
+
+#ByVerb{
+	left : 41%;
+	top : 2500px;
+	width : 20%;
+	height : 300px;
+	border-radius: 15px;
+}
+
+#ByVerb span{
+	color : royalblue;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	font-size: 3em;
+}
+
+
+div span{
+	padding : 10px;
+	color : #332e28;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	font-size: 3em;
+}
+
+#label2, #id2, #label2Cred, #id2Cred{
+	display: none;
+}
+
+#main select{
+	background: transparent;
+	width: 50%;
+	font-size: 20px;
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;;
+}
+
+#main label{
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	font-size: 16px;
+}
+
+#main button{
+	position: absolute;
+	display: block;
+	background-color: #c34e18;
+	color: #f6f6f6
+	color: yellow;	
+	border-radius: 3px;
+	font-size: 15px;
+}
+
+
+
+
+#main input{
+	width : 70%;
+}
+
+
+
+
+
+/*
+ * LMS DIV
+ */
+#LMSStuff{
+	left: 11%;
+	top: 80px;
+	width: 80%;
+	height: 300px;
+	background-color: #99FFFF;
+	border-radius: 15px;
+}
+
+#LMSButton{
+	position:absolute;
+	display: block;
+	width: 20%;
+	height: 20%;
+	left: 71%;
+	top: 25%;
+}
+
+#DebugOffButton{
+	position:absolute;
+	display: block;
+	width: 20%;
+	height: 20%;
+	left: 71%;
+	top: 50%;
+}
+
+#DebugOnButton{
+	position:absolute;
+	display: block;
+	width: 20%;
+	height: 20%;
+	left: 71%;
+	top: 75%;
+}
+
+#IE8{
+	position:absolute;
+	display: block;
+	width: 20%;
+	height: 10%;
+	left: 71%;
+	top: 5%;
+}
+
+#AgentCredentials{
+	left: 11%;
+	width: 20%;
+}
+
+#AgentCredentials input{
+	margin : 3px;
+}
+
+#Scope{
+	position: absolute;
+	top : 8%;
+	left : 22%;
+	height : 90%;
+	width : 20%;
+}
+
+#Scope input{
+	width: 20px;
+	margin: 7px;
+}
+
+#Scope label{
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	font-size: 16px;
+}
+
+#OtherCred{
+	position: absolute;
+	left: 40%;
+	width: 25%;
+	height: 60%;
+	top: 3%;
+}
+
+#OtherCred input{
+	margin: 10px;
+	height: 20px;
+}
+
+
+
+/*
+ * STATE DIV
+ */
+
+#StateStuff{
+	left: 11%;
+	top: 480px;
+	width: 80%;
+	height: 300px;
+	background-color: #99FFFF;
+	border-radius: 15px;
+}
+
+#StateTextarea{
+	position : absolute;
+	left: 54%;
+	width: 30%;
+	height: 80%;
+	top: 10%;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+}
+
+#StateTextareaLabel{
+	position : absolute;
+	left: 54%;
+	width: 30%;
+	height: 10%;
+	top: 3%;
+}
+
+#StateForm{
+	position: absolute;
+	left: 22%;
+	top: 18%;
+	width: 30%;
+	height: 60%;
+}
+
+
+#StateForm input{
+	width: 60%;
+	margin: 10px;
+	height: 20px; 
+}
+
+#StateStuff label{
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	font-size: 16px;
+}
+
+#PostStateButton{
+	top: 10%;
+	left: 90%;
+}
+
+#GetStateButton{
+	top: 25%;
+	left: 90%;
+}
+
+#PutStateButton{
+	top: 65%;
+	left: 90%;
+}
+
+#TryIt{
+	top: 40%;
+	left: 90%;	
+}
+
+#StateAgentForm{
+	top: 30%;
+	left: 10px;
+	width: 20%;
+}
+
+#StateAgentForm input{
+	margin: 3px;
+}
+
+
+/* 
+ * ACTIVITY PROFILE DIV
+ */
+#ActivityProfileDiv{
+	left: 11%;
+	top: 920px;
+	width: 80%;
+	height: 300px;
+	background-color: #99FFFF;
+	border-radius: 15px;
+}
+
+#PostActivityProfile{
+	left: 88%;
+	top: 16%;
+}
+
+#GetActivityProfile{
+	left: 88%;
+	top: 36%;
+}
+
+#GetActivity{
+	left: 88%;
+	top: 56%;
+}
+
+
+#PutActivityProfile{
+	left: 88%;
+	top: 76%;
+}
+
+
+#ActvProfDocument{
+	position : absolute;
+	left: 38%;
+	width: 33%;
+	height: 88%;
+	top: 3px;
+}
+
+#ActvProfTextarea{
+	width: 90%;
+	height: 90%;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+}
+
+#ActvProfRest{
+	position : absolute;
+	left: 3%;
+	width: 33%;
+	height: 80%;
+	top: 15%;
+}
+
+#ActvProfRest input{
+	width: 60%;
+	margin: 10px;
+	height: 20px; 
+}
+
+#ActvProfRest label{
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	font-size: 16px;
+}
+
+
+
+/*
+ * 
+ * AGENT PROFILE
+ * 
+ */
+#AgentProfileAPI{
+	left: 11%;
+	top: 2800px;
+	width: 80%;
+	height: 300px;
+	background-color: #99FFFF;
+	border-radius: 15px;
+}
+
+
+#AgentProfileAgentForm{
+	left: 2%;
+	width: 25%;
+}
+
+#AgentProfileAgentForm input{
+	margin : 3px;
+}
+
+#AgentProfileAPI label{
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	font-size: 16px;
+}
+
+#APDocument{
+	position : absolute;
+	left: 38%;
+	width: 33%;
+	height: 88%;
+	top: 3px;
+}
+
+#APTextarea{
+	width: 90%;
+	height: 90%;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+}
+
+
+#PostAPButton{
+	top: 8%;
+	left: 88%;
+}
+
+#GetAPButton{
+	top: 28%;
+	left: 88%;
+}
+
+#PutAPButton{
+	top: 48%;
+	left: 88%;
+}
+
+
+
+
+/*
+ * WRITE STATEMENTS DIV
+ */
+#WriteStatements{
+	left: 11%;
+	top: 1320px;
+	width: 80%;
+	height: 800px;
+	background-color: #99FFFF;
+	border-radius: 15px;
+}
+
+#WriteStatementForm{
+	position: absolute;
+	left: 7%;
+	width: 80%;
+	top: 10%;
+	height: 85%;
+}
+
+#StatementTextarea{
+	position: absolute;
+	width: 90%;
+	height: 90%;
+	top: 7%;
+	left: 5%;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+}
+
+#PostStatementButton{
+	left: 88%;
+	top: 15%;
+	height: 15%;
+}
+
+#PutStatementButton{
+	left: 88%;
+	top: 40%;
+	height: 15%;
+}
+
+/*
+ *  RETRIEVE STATEMENTS
+ * 
+ */
+#RetrieveStatements{
+	left: 11%;
+	top: 2320px;
+	width: 80%;
+	height: 300px;
+	background-color: #99FFFF;
+	border-radius: 15px;
+}
+
+#submitAgent{
+	position : absolute;
+	left : 10px;
+	width : 28%;
+}
+
+#submitAgent input{
+	margin: 10px
+}
+
+#GetStatementsEverythingElse{
+	position: absolute;
+	top : 5%;
+	left : 45%;
+	width : 30%;
+}
+
+#GetStatementsEverythingElse input{
+	margin: 10px;
+}
+
+#GetStatementButton{
+	left: 85%;
+}
+
+
+
+
+/* 
+ * HELPER METHOD
+ * 
+ */
+
+.hidden{
+	display: none;

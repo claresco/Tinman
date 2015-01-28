@@ -1,0 +1,37 @@
+Good inputs:
+
+Bare Minimum
+
+Agent as actor
+Group as actor
+
+Activity as object
+Agent as object
+Group as object
+Substatement as object
+Statement ref as object
+
+Result
+Context
+Extension
+
+
+Bad inputs:
+Empty
+Null
+Random text
+
+Missing actor
+Missing verb 
+Missing object
+
+Actor element empty
+Verb element empty
+Object element empty
+
+Actor element null
+Verb element null
+Object element null
+
+
+Same statementID 

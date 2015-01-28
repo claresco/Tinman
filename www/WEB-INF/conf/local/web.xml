@@ -1,0 +1,61 @@
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd"
+[  
+	<!ENTITY base SYSTEM "./conf/base.xml">
+]
+> 
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+
+  &base;
+    
+  <context-param>
+  	<param-name>DriverName</param-name>
+  	<param-value>org.postgresql.Driver</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>DatabaseServer</param-name>
+  	<param-value>Insert-Your-JDBC</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>DatabaseLogin</param-name>
+  	<param-value>Insert-DB-Login</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>DatabasePassword</param-name>
+  	<param-value>Insert-DB-Password</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>LMSLogin</param-name>
+  	<param-value>Insert-LMS-Login</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>LMSPassword</param-name>
+  	<param-value>Insert-LMS-Password</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>debug</param-name>
+  	<param-value>yes</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>LogPath</param-name>
+  	<param-value>Insert-Your-Log-Path</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>CredentialsListPath</param-name>
+  	<param-value>Insert-Your-Credentials-List-Path</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>AcceptedDomains</param-name>
+  	<param-value>Insert-your-domain-whitelists</param-value>
+  </context-param>
+  
+</web-app>

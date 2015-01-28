@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Appenders>
+		<RollingFile name="all" fileName="usr/local/webapps/log/all.log" 
+			filePattern="/usr/local/webapps/log/$${date:yyyy-MM}/all-%d{yyyy-MM-dd}.log">
+      		<PatternLayout>
+        		<Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+      		</PatternLayout>
+      		<Policies>
+      			<TimeBasedTriggeringPolicy />
+      		</Policies>
+    	</RollingFile>
+    	<File name="bugs" fileName="/usr/local/webapps/log/bugs.log">
+      		<PatternLayout>
+        		<Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+      		</PatternLayout>
+    	</File>
+    	<File name="security-threats" fileName="/usr/local/webapps/log/security-threats.log">
+      		<PatternLayout>
+        		<Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+      		</PatternLayout>
+    	</File>
+    	<Console name="Console" target="SYSTEM_OUT">
+      		<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    	</Console>
+	</Appenders>
+	
+	<Loggers>
+		<Root level="trace">
+			<AppenderRef ref="all"/>
+		</Root>
+		<logger name="com.claresco.security.threats" level="warn">
+			<AppenderRef ref="security-threats"/>
+		</logger>
+		<logger name="com.claresco.bugs" level="fatal">
+			<AppenderRef ref="bugs"/>
+		</logger>
+	</Loggers>	
+	
+</Configuration>

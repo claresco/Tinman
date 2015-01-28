@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>getStatements</title>
+		<meta name="description" content="">
+		<meta name="author" content="Rheza Hidajat">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="stylesheet" href="css/getStatements.css">
+		<script src="js-lib/jquery-1.10.1.min.js"></script>
+		<script src="js/getStatements.js"></script>
+	</head>
+
+	<body>
+		<div>
+			<header>
+				<h1>Let's Retrieve Some Statements From Claresco LRS</h1>
+			</header>
+
+			<div id="main">
+				
+				<!--Requesting credentials-->
+				<div id="LMSStuff">
+					
+					<span>Credentials</span>
+					
+					<form id="AgentCredentials">
+						<select name="objectType">
+							<option value="Agent">Agent</option>
+							<option value="Group">Group</option>
+						</select><br />
+						Name: <input type="text" name="name" id="CredentialName"/><br />
+						<select id="idTypeCred" name="idTypeCred">
+							<option value="mbox" selected="selected">Mbox</option>	
+							<option value="account">Account</option>
+						</select><br />
+						<label id="label1Cred" for="id1"> mbox: </label><input type="text" id="id1Cred"/><br />
+						<label id="label2Cred" for="id2"> name: </label><input type="text" id="id2Cred"/><br />
+					</form> 
+					
+					<form id="Scope">
+						<input type="checkbox" value="statements/write"><label>write statements</label><br>
+						<input type="checkbox" value="statements/read/mine"><label>read only my statements</label><br>
+						<input type="checkbox" value="statements/read"><label>read any statements</label><br>
+						<input type="checkbox" value="state"><label>read and write state</label><br>
+						<input type="checkbox" value="define"><label>redefine activities and actor</label><br>
+						<input type="checkbox" value="profile"><label>read and write profile data</label><br>
+						<input type="checkbox" value="all/read"><label>read all</labeL><br>
+						<input type="checkbox" value="all"><label>unrestricted access</label><br> 
+					</form>
+					
+					<form id="OtherCred">
+						<label>Activity ID :</label><input type="text" id="activityID"/><br>
+						<input type="text" id="activityID2"/><br>
+						<input type="text" id="activityID3"/><br>
+						<label>Expiry (ISO 8601):</label><input type="text" id="expiry"/><br>
+						<label>Registration :</label><input type"text" id="registration"/><br>
+					</form>
+					
+					<button id="IE8" type="button"></button>
+					<button id="LMSButton" type="button">LMS connect to LRS</button>
+					<button id="DebugOffButton" type="button">Turn on authentication</button>
+					<button id="DebugOnButton" type="button">Turn off authentication</button>
+				</div>
+				
+				
+				
+				<!-- Activity Profile-->
+				<div id="ActivityProfileDiv">
+					<span>Activity Profile</span>
+					
+					<form id="ActvProfDocument">
+						<label for="ActvProfTextarea" id="ActvProfTextareaLabel">Document: </label><br>
+						<textarea id="ActvProfTextarea"></textarea>
+					</form>
+					
+					<form id="ActvProfRest">
+						<label>Activity ID :</label><input type="text" id="ActvProfActivityID"/><br>
+						<label>Profile ID :</label><input type"text" id="ProfileID"/><br>
+						<label>Since (ISO 8601) :</label><input type="text" id="ActvProfSince"/><br>
+					</form>
+					
+					<button id="PostActivityProfile" type="button">Post Activity Profile</button>
+					<button id="GetActivityProfile" type="button">Get Activity Profile</button>
+					<button id="GetActivity" type="button">Get Activity</button>
+					<button id="PutActivityProfile" type="button">Put Activity Profile</button>
+				</div>
+				
+				
+				
+				<!-- State -->
+				<div id="StateStuff">
+					<span>State</span>
+					
+					<form id="StateForm">
+						<label>Activity ID :</label><input type="text" id="StateActivityID"/><br>
+						<label>Registration :</label><input type"text" id="StateRegistration"/><br>
+						<label>State ID :</label><input type="text" id="StateID"/><br>
+					</form>
+					
+					<form id="StateAgentForm">
+						<select name="objectType">
+							<option value="Agent">Agent</option>
+							<option value="Group">Group</option>
+						</select><br />
+						Name: <input type="text" id="StateAgentName"/><br />
+						<select id="StateIdType">
+							<option value="mbox" selected="selected">Mbox</option>	
+							<option value="account">Account</option>
+						</select><br />
+						<label id="StateMboxLabel"> mbox: </label><input type="text" id="StateMbox"/><br />
+						<label id="StateNameLabel" class="hidden"> name: </label><input type="text" class="hidden" id="StateAccountName"/><br />
+					</form> 
+					
+					<form id="StateDocument">
+						<label for="StateTextarea" id="StateTextareaLabel">Document: </label>
+						<textarea id="StateTextarea"></textarea>
+					</form>	
+						
+					<button id="PostStateButton" type="button">Post State</button>
+					<button id="GetStateButton" type="button">Get State</button>
+					<button id="TryIt" type="button">Try</button>
+					<button id="PutStateButton" type="button">Put State</button>
+				</div>
+				
+				
+				
+				<!-- State -->
+				<div id="AgentProfileAPI">
+					<span>Agent Profile</span>
+					
+					<form id="AgentProfileAgentForm">
+						<select name="objectType">
+							<option value="Agent">Agent</option>
+							<option value="Group">Group</option>
+						</select><br />
+						Name: <input type="text" id="APAgentName"/><br />
+						<select id="AgentProfileIdType">
+							<option value="mbox" selected="selected">Mbox</option>	
+							<option value="account">Account</option>
+						</select><br />
+						<label id="APMboxLabel"> mbox: </label><input type="text" id="APMbox"/><br />
+						<label id="APNameLabel" class="hidden"> name: </label><input type="text" class="hidden" id="APAccountName"/><br />
+						<br>
+						<label>profileId :</label><input type="text" id="APProfileId"/><br>
+						<label>since :</label><input type"text" id="APSince" /><br>
+					</form> 
+					
+					<form id="APDocument">
+						<label for="APTextarea" id="APTextareaLabel">Document: </label>
+						<textarea id="APTextarea"></textarea>
+					</form>	
+						
+					<button id="PostAPButton" type="button">Post Agent Profile</button>
+					<button id="GetAPButton" type="button">Get Agent Profile</button>
+					<button id="PutAPButton" type="button">Put Agent Profile</button>
+				</div>
+				
+				
+				
+				
+				<!-- To write statements-->
+				<div id="WriteStatements">
+					<span>Write Statements</span>
+					
+					<form id="WriteStatementForm">
+						<label for="StatementTextarea" id="StatementTextareaLabel">Statement in JSON: </label>
+						<textarea id="StatementTextarea"></textarea>
+					</form>
+					
+					<button id="PostStatementButton" type="button">Post Statement</button>
+					<button id="PutStatementButton" type="button">Put Statement</button>
+				</div>
+				
+				<div id="RetrieveStatements">
+					<span>Retrieve Statements</span>
+					<form id="submitAgent">
+						<select name="objectType">
+							<option value="Agent">Agent</option>
+							<option value="Group">Group</option>
+						</select><br />
+						Name: <input type="text" name="name" id="agentName"/><br />
+						<select id="idType" name="idType">
+							<option value="mbox">Mbox</option>	
+							<option value="account">Account</option>
+						</select><br />
+						<label id="label1" for="id1"> mbox: </label><input type="text" name="id1" id="id1"/><br />
+						<label id="label2" for="id2"> name: </label><input type="text" name="id2" id="id2"/><br />
+					</form>
+					
+					<form id="GetStatementsEverythingElse">
+						Statement Id: <input type="text" id="StatementId"/><br />
+						Verb IRI: <input type="text" id="VerbName"/><br />
+						VoidedStatementId: <input type="text" id="VoidedStatementId"/><br />
+						Activity ID: <input type="text" id="activityId"/><br />
+						since: <input type="text" id="since"/><br />
+						until: <input type="text" id="until" /><br />
+					</form>
+					
+					<button id="GetStatementButton" type="button">Get Statements</button>
+					
+				</div>
+				
+			</div> <!-- End of main -->
+
+			<footer>
+				<p>
+					&copy; Copyright  by Rheza Hidajat
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>

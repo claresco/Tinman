@@ -1,0 +1,11 @@
+{
+	"actors":{
+		"objectType": "Person",
+        "name":"[This Person]",
+        "mbox":"[mailto:personA@society.com, mailto:personB@society.com]"
+	},
+	"activity":["activityName1", "activityName2"],
+	"scope":["state", "profile", "all", "statements/read"],
+	"historical":false,
+	"expiry":"2014-12-21T15:19:00Z"
+}

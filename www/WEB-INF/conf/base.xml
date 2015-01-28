@@ -1,0 +1,43 @@
+<welcome-file-list>
+  	<welcome-file>getStatements.html</welcome-file>
+</welcome-file-list>
+  
+<servlet>
+  	<servlet-name>XapiServlet</servlet-name>
+  	<servlet-class>com.claresco.tinman.servlet.XapiServlet</servlet-class>
+</servlet>
+  
+<servlet-mapping>
+  	<servlet-name>XapiServlet</servlet-name>
+  	<url-pattern>/xapi/*</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  	<servlet-name>AdminServlet</servlet-name>
+  	<servlet-class>com.claresco.tinman.servlet.XapiAdminServlet</servlet-class>
+</servlet>
+  
+<servlet-mapping>
+  	<servlet-name>AdminServlet</servlet-name>
+  	<url-pattern>/control/*</url-pattern>
+</servlet-mapping>
+
+<context-param>
+  	<param-name>AdminLogin</param-name>
+  	<param-value>Insert-your-admin-login</param-value>
+</context-param>
+
+<context-param>
+  	<param-name>AdminPassword</param-name>
+  	<param-value>Insert-your-admin-password</param-value>
+</context-param>
+
+<context-param>
+	<param-name>LogFileName</param-name>
+	<param-value>errorlog.txt</param-value>
+</context-param>
+
+<context-param>
+	<param-name>CredentialsListFileName</param-name>
+	<param-value>credentials-list.txt</param-value>
+</context-param>
